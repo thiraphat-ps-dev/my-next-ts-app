@@ -43,6 +43,7 @@ const HomePage: NextPage = () => {
             component="h1"
             gutterBottom
             sx={{ color: '#ffffff' }}
+            id="title"
           >
             Home Page
           </Typography>
