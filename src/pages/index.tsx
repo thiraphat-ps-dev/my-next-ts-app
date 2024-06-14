@@ -13,9 +13,7 @@ import {
 } from '@mui/material';
 import useStyles from '../hooks/useStyles';
 import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
-import Sidebar from '../components/Sidebar/Sidebar';
-import MenuIcon from '@mui/icons-material/Menu';
+import Footer from '@/components/Footer/Footer';
 import { useState } from 'react';
 
 const HomePage: NextPage = () => {
@@ -29,19 +27,16 @@ const HomePage: NextPage = () => {
   return (
     <Box
       sx={{
-        background: 'linear-gradient(135deg, #71b7e6, #9b59b6)',
+        display: 'flex',
+        flexDirection: 'column',
         minHeight: '100vh',
+        justifyContent: 'space-between',
+        background: 'linear-gradient(135deg, #71b7e6, #9b59b6)',
+        flex: 1,
       }}
     >
       <Navbar />
-      <Sidebar open={sidebarOpen} onClose={toggleSidebar} />
       <Container maxWidth="lg">
-        <IconButton
-          sx={{ position: 'fixed', top: 16, left: 16, color: '#ffffff' }}
-          onClick={toggleSidebar}
-        >
-          <MenuIcon />
-        </IconButton>
         <Box sx={{ textAlign: 'center', marginTop: 8 }}>
           <Typography
             variant="h2"

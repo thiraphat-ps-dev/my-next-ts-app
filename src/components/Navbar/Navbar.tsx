@@ -1,30 +1,51 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-import Link from 'next/link';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import LogoutIcon from '@mui/icons-material/Logout';
+import HomeIcon from '@mui/icons-material/Home';
+import { Button } from '@mui/material';
+import useStyles from './Navbar.style';
 
 const Navbar: React.FC = () => {
+  const { navbarStyles } = useStyles();
+
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          My Next.js App
-        </Typography>
-        <Box sx={{ display: 'flex' }}>
-          <Link href="/" passHref>
-            <Button color="inherit">Home</Button>
-          </Link>
-          <Link href="/about" passHref>
-            <Button color="inherit">About</Button>
-          </Link>
-          <Link href="/contact" passHref>
-            <Button color="inherit">Contact</Button>
-          </Link>
-          <Link href="/login" passHref>
-            <Button color="inherit">Login</Button>
-          </Link>
-        </Box>
-      </Toolbar>
-    </AppBar>
+    <Box>
+      <AppBar position="static" sx={navbarStyles}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="logo"
+            sx={{ mr: 2 }}
+          >
+            <HomeIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap component="div" flex={1}>
+            My Next.js App
+          </Typography>
+          <IconButton
+            size="large"
+            edge="end"
+            color="inherit"
+            aria-label="account"
+          >
+            <AccountCircle />
+          </IconButton>
+          <Typography variant="body1" component="div" sx={{ mx: 2 }}>
+            Username
+          </Typography>
+          <Button color="inherit" startIcon={<LogoutIcon />}>
+            Logout
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 };
 

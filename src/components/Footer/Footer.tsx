@@ -1,18 +1,19 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 const Footer: React.FC = () => {
   return (
     <Box
       sx={{
+        bgcolor: 'primary.main',
+        p: 2,
+        mt: 'auto',
+        color: 'white',
         textAlign: 'center',
-        py: 3,
-        backgroundColor: '#3f51b5',
-        color: '#fff',
-        mt: 4,
       }}
     >
-      <Typography variant="body1">
+      <Typography variant="body2" color="inherit">
         © 2024 My Next.js App. All rights reserved.
       </Typography>
     </Box>
