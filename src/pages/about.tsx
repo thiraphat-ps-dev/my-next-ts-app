@@ -1,4 +1,4 @@
-// src/app/about/page.tsx
+// src/pages/about.tsx
 import { useQuery } from '@tanstack/react-query';
 import {
   Container,
@@ -21,7 +21,7 @@ const AboutPage = () => {
   if (isLoading) {
     return (
       <Container maxWidth="md">
-        <Box sx={{ textAlign: 'center', marginTop: 8 }}>
+        <Box sx={{ textAlign: 'center', marginTop: 8, color: '#ffffff' }}>
           <CircularProgress />
           <Typography variant="h6" component="div">
             Loading...
@@ -34,7 +34,7 @@ const AboutPage = () => {
   if (error) {
     return (
       <Container maxWidth="md">
-        <Box sx={{ textAlign: 'center', marginTop: 8 }}>
+        <Box sx={{ textAlign: 'center', marginTop: 8, color: '#ffffff' }}>
           <Typography variant="h6" component="div" color="error">
             Error fetching data
           </Typography>
@@ -46,23 +46,33 @@ const AboutPage = () => {
   return (
     <Container maxWidth="md">
       <Box sx={{ textAlign: 'center', marginTop: 8 }}>
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography
+          variant="h2"
+          component="h1"
+          gutterBottom
+          sx={{ color: '#ffffff' }}
+        >
           About Us
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph sx={{ color: '#ffffff' }}>
           This is the about page. Here you can write some information about your
           website or your company.
         </Typography>
-        <Typography variant="h5" component="div" gutterBottom>
+        <Typography
+          variant="h5"
+          component="div"
+          gutterBottom
+          sx={{ color: '#ffffff' }}
+        >
           User Information:
         </Typography>
-        <Typography variant="body1" component="div">
+        <Typography variant="body1" component="div" sx={{ color: '#ffffff' }}>
           Name: {data.name}
         </Typography>
-        <Typography variant="body1" component="div">
+        <Typography variant="body1" component="div" sx={{ color: '#ffffff' }}>
           Email: {data.email}
         </Typography>
-        <Typography variant="body1" component="div">
+        <Typography variant="body1" component="div" sx={{ color: '#ffffff' }}>
           Phone: {data.phone}
         </Typography>
         <nav>

@@ -1,4 +1,4 @@
-// src/app/newpage/page.tsx
+// src/pages/newpage.tsx
 import { useQuery } from '@tanstack/react-query';
 import {
   Container,
@@ -22,7 +22,7 @@ const NewPage = () => {
   if (isLoading) {
     return (
       <Container maxWidth="md">
-        <Box sx={{ textAlign: 'center', marginTop: 8 }}>
+        <Box sx={{ textAlign: 'center', marginTop: 8, color: '#ffffff' }}>
           <CircularProgress />
           <Typography variant="h6" component="div">
             Loading...
@@ -35,7 +35,7 @@ const NewPage = () => {
   if (error) {
     return (
       <Container maxWidth="md">
-        <Box sx={{ textAlign: 'center', marginTop: 8 }}>
+        <Box sx={{ textAlign: 'center', marginTop: 8, color: '#ffffff' }}>
           <Typography variant="h6" component="div" color="error">
             Error fetching data
           </Typography>
@@ -59,14 +59,25 @@ const NewPage = () => {
   return (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: 'center', marginTop: 8 }}>
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography
+          variant="h2"
+          component="h1"
+          gutterBottom
+          sx={{ color: '#ffffff' }}
+        >
           New Page
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph sx={{ color: '#ffffff' }}>
           This is the new page. Here you can see a list of posts fetched from an
           API.
         </Typography>
-        <Paper sx={{ height: 600, width: '100%' }}>
+        <Paper
+          sx={{
+            height: 600,
+            width: '100%',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          }}
+        >
           <DataGrid rows={rows} columns={columns} pagination />
         </Paper>
         <nav>

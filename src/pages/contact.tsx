@@ -21,7 +21,7 @@ const ContactPage = () => {
   if (isLoading) {
     return (
       <Container maxWidth="md">
-        <Box sx={{ textAlign: 'center', marginTop: 8 }}>
+        <Box sx={{ textAlign: 'center', marginTop: 8, color: '#ffffff' }}>
           <CircularProgress />
           <Typography variant="h6" component="div">
             Loading...
@@ -34,7 +34,7 @@ const ContactPage = () => {
   if (error) {
     return (
       <Container maxWidth="md">
-        <Box sx={{ textAlign: 'center', marginTop: 8 }}>
+        <Box sx={{ textAlign: 'center', marginTop: 8, color: '#ffffff' }}>
           <Typography variant="h6" component="div" color="error">
             Error fetching data
           </Typography>
@@ -46,23 +46,33 @@ const ContactPage = () => {
   return (
     <Container maxWidth="md">
       <Box sx={{ textAlign: 'center', marginTop: 8 }}>
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography
+          variant="h2"
+          component="h1"
+          gutterBottom
+          sx={{ color: '#ffffff' }}
+        >
           Contact Us
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph sx={{ color: '#ffffff' }}>
           This is the contact page. Here you can write some information about
           how to contact your website or your company.
         </Typography>
-        <Typography variant="h5" component="div" gutterBottom>
+        <Typography
+          variant="h5"
+          component="div"
+          gutterBottom
+          sx={{ color: '#ffffff' }}
+        >
           User Information:
         </Typography>
-        <Typography variant="body1" component="div">
+        <Typography variant="body1" component="div" sx={{ color: '#ffffff' }}>
           Name: {data.name}
         </Typography>
-        <Typography variant="body1" component="div">
+        <Typography variant="body1" component="div" sx={{ color: '#ffffff' }}>
           Email: {data.email}
         </Typography>
-        <Typography variant="body1" component="div">
+        <Typography variant="body1" component="div" sx={{ color: '#ffffff' }}>
           Phone: {data.phone}
         </Typography>
         <nav>

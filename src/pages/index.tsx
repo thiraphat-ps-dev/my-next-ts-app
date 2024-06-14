@@ -19,14 +19,18 @@ const HomePage: NextPage = () => {
   return (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: 'center', marginTop: 8 }}>
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography
+          variant="h2"
+          component="h1"
+          gutterBottom
+          sx={{ color: '#ffffff' }}
+        >
           Home Page
         </Typography>
         <Button
-          sx={buttonStyles}
+          sx={{ ...buttonStyles, marginBottom: '20px' }}
           variant="contained"
           size="large"
-          style={{ marginBottom: '20px' }}
         >
           Hello Material-UI
         </Button>
@@ -35,28 +39,45 @@ const HomePage: NextPage = () => {
             sx={{ display: 'flex', justifyContent: 'center', marginBottom: 4 }}
           >
             <Link href="/newpage" passHref>
-              <Button variant="outlined" sx={{ margin: 1 }}>
+              <Button
+                variant="outlined"
+                sx={{ margin: 1, color: '#ffffff', borderColor: '#ffffff' }}
+              >
                 New Page
               </Button>
             </Link>
             <Link href="/about" passHref>
-              <Button variant="outlined" sx={{ margin: 1 }}>
+              <Button
+                variant="outlined"
+                sx={{ margin: 1, color: '#ffffff', borderColor: '#ffffff' }}
+              >
                 About Us
               </Button>
             </Link>
             <Link href="/contact" passHref>
-              <Button variant="outlined" sx={{ margin: 1 }}>
+              <Button
+                variant="outlined"
+                sx={{ margin: 1, color: '#ffffff', borderColor: '#ffffff' }}
+              >
                 Contact Us
               </Button>
             </Link>
             <Link href="/login" passHref>
-              <Button variant="outlined" sx={{ margin: 1 }}>
+              <Button
+                variant="outlined"
+                sx={{ margin: 1, color: '#ffffff', borderColor: '#ffffff' }}
+              >
                 Login
               </Button>
             </Link>
           </Box>
         </nav>
-        <Typography variant="h4" component="h2" gutterBottom>
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          sx={{ color: '#ffffff' }}
+        >
           Explore Our Features
         </Typography>
         <Grid container spacing={4}>
