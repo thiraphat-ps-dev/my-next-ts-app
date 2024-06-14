@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { AppProps } from 'next/app';
 import { CssBaseline, Container, Box } from '@mui/material';
-import ThemeProviderWrapper from '../components/ThemeProviderWrapper';
-import ReactQueryProvider from '@/components/ReactQueryProvider';
+import ThemeProviderWrapper from '../components/common/ThemeProviderWrapper';
+import ReactQueryProvider from '@/components/common/ReactQueryProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

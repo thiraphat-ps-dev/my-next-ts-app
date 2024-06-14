@@ -8,7 +8,7 @@ import {
   Button,
 } from '@mui/material';
 import Link from 'next/link';
-import { fetchUserData } from '../utils/fetchUserData';
+import { fetchUserData } from '../utils/api/fetchUserData';
 
 const ContactPage = () => {
   const { data, error, isLoading } = useQuery({

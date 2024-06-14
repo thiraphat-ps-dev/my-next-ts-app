@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { DataGrid, GridColDef, GridRowsProp } from '@mui/x-data-grid';
 import Link from 'next/link';
-import { fetchPostsData } from '../utils/fetchPostsData';
+import { fetchPostsData } from '../utils/api/fetchPostsData';
 
 const NewPage = () => {
   const { data, error, isLoading } = useQuery({
