@@ -28,7 +28,7 @@ const HomePage: NextPage = () => {
           size="large"
           style={{ marginBottom: '20px' }}
         >
-          Hello Material-UI Project AAA
+          Hello Material-UI
         </Button>
         <nav>
           <Box
@@ -47,6 +47,11 @@ const HomePage: NextPage = () => {
             <Link href="/contact" passHref>
               <Button variant="outlined" sx={{ margin: 1 }}>
                 Contact Us
+              </Button>
+            </Link>
+            <Link href="/login" passHref>
+              <Button variant="outlined" sx={{ margin: 1 }}>
+                Login
               </Button>
             </Link>
           </Box>
