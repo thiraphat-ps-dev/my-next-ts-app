@@ -28,7 +28,7 @@ const HomePage: NextPage = () => {
           size="large"
           style={{ marginBottom: '20px' }}
         >
-          Hello Material-UI
+          Hello Material-UI Project
         </Button>
         <nav>
           <Box
