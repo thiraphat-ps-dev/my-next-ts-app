@@ -1,4 +1,3 @@
-
 # My Next.js TypeScript App
 
 This is a Next.js project bootstrapped with TypeScript, Material-UI, React Query, and Storybook.
