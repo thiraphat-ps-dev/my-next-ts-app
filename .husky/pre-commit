@@ -1,4 +1,21 @@
+# Format code
 npm run format
+
+# Add file changes
+git add .
+
+# Lint code
 npm run lint
+
+# Run Security Checks
+npm audit
+
+# Run TypeScript type checking
+npm run type-check
+
+# Run tests
 npm run test
+
+# Run Cypress tests
 npm run cypress:run
+

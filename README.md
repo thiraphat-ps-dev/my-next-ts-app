@@ -167,11 +167,7 @@ import useStyles from '../hooks/useStyles';
 const ExampleComponent: React.FC = () => {
   const { exampleStyles } = useStyles();
 
-  return (
-    <Box sx={exampleStyles}>
-      {/* Component content */}
-    </Box>
-  );
+  return <Box sx={exampleStyles}>{/* Component content */}</Box>;
 };
 
 export default ExampleComponent;
@@ -190,8 +186,8 @@ const useFetchData = (url: string) => {
 
   useEffect(() => {
     fetch(url)
-      .then(response => response.json())
-      .then(data => setData(data));
+      .then((response) => response.json())
+      .then((data) => setData(data));
   }, [url]);
 
   return data;
