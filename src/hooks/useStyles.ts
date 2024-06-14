@@ -7,7 +7,7 @@ const useStyles = () => {
 
   const buttonStyles: SxProps = {
     backgroundColor: theme.palette.primary.main,
-    color: 'red',
+    color: theme.palette.common.white,
     '&:hover': {
       backgroundColor: theme.palette.primary.dark,
     },

@@ -1,22 +1,18 @@
-// src/app/layout.tsx
-import * as React from 'react';
+import ReactQueryProvider from '../components/ReactQueryProvider';
 import ThemeProviderWrapper from '../components/ThemeProviderWrapper';
 
-interface Props {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
-}
-
-const RootLayout: React.FC<Props> = ({ children }) => {
+}) {
   return (
     <html lang="en">
-      <head>
-        <title>My Next.js App</title>
-      </head>
       <body>
-        <ThemeProviderWrapper>{children}</ThemeProviderWrapper>
+        <ReactQueryProvider>
+          <ThemeProviderWrapper>{children}</ThemeProviderWrapper>
+        </ReactQueryProvider>
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
