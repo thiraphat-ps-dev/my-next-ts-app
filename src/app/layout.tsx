@@ -1,6 +1,6 @@
 // src/app/layout.tsx
-import * as React from "react";
-import ThemeProviderWrapper from "../components/ThemeProviderWrapper";
+import * as React from 'react';
+import ThemeProviderWrapper from '../components/ThemeProviderWrapper';
 
 interface Props {
   children: React.ReactNode;

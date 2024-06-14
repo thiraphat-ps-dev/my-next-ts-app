@@ -1,9 +1,9 @@
 // src/app/page.tsx
-"use client";
+'use client';
 
-import * as React from "react";
-import Button from "@mui/material/Button";
-import useStyles from "../hook/useStyles";
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import useStyles from '../hook/useStyles';
 
 const Home: React.FC = () => {
   const { buttonStyles } = useStyles();
