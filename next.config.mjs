@@ -4,9 +4,6 @@ const nextConfig = {
   // การตั้งค่าพื้นฐานต่างๆ ของ Next.js
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    appDir: false,
-  },
   // การปรับแต่ง Webpack
   webpack: (config, { isServer }) => {
     // เพิ่ม .mjs เป็นส่วนหนึ่งของการ resolve
