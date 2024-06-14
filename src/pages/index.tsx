@@ -15,6 +15,7 @@ import useStyles from '../hooks/useStyles';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 import { useState } from 'react';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 const HomePage: NextPage = () => {
   const { buttonStyles } = useStyles();
@@ -36,6 +37,7 @@ const HomePage: NextPage = () => {
       }}
     >
       <Navbar />
+      <ThemeSwitcher />
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', marginTop: 8 }}>
           <Typography

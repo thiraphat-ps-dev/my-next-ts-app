@@ -2,13 +2,13 @@
 import * as React from 'react';
 import { AppProps } from 'next/app';
 import { CssBaseline, Container, Box } from '@mui/material';
-import ThemeProviderWrapper from '../components/common/ThemeProviderWrapper';
+import ThemeProvider from '../themes/ThemeContext';
 import ReactQueryProvider from '@/components/common/ReactQueryProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ReactQueryProvider>
-      <ThemeProviderWrapper>
+      <ThemeProvider>
         <CssBaseline />
         <Box
           sx={{
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </Container>
         </Box>
-      </ThemeProviderWrapper>
+      </ThemeProvider>
     </ReactQueryProvider>
   );
 }
