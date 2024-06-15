@@ -1,5 +1,5 @@
 // src/utils/fetchPostsData.test.ts
-import { fetchPostsData } from '../api/fetchPostsData';
+import { fetchPostsData } from '../fetchPostsData';
 
 describe('fetchPostsData', () => {
   beforeEach(() => {

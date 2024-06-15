@@ -1,8 +1,8 @@
 // src/pages/login.tsx
 import React from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import {
   Container,
   Box,
@@ -10,11 +10,11 @@ import {
   TextField,
   Button,
   Paper,
-  Grid,
   Avatar,
 } from '@mui/material';
 import { useRouter } from 'next/router';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import * as yup from 'yup';
 
 interface IFormInput {
   email: string;
@@ -42,8 +42,7 @@ const LoginPage = () => {
   });
   const router = useRouter();
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    // console.log(data);
+  const onSubmit: SubmitHandler<IFormInput> = () => {
     // เพิ่มโค้ดสำหรับการตรวจสอบการล็อกอินที่นี่
     // เช่น การตรวจสอบ username และ password
     router.push('/'); // หลังจากล็อกอินสำเร็จ ให้เปลี่ยนหน้าไปที่หน้าแรก

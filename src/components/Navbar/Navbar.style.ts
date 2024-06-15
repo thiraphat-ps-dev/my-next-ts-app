@@ -1,5 +1,5 @@
-import { SxProps } from '@mui/system';
 import { useTheme } from '@mui/material/styles';
+import { SxProps } from '@mui/system';
 
 const useStyles = () => {
   const theme = useTheme();

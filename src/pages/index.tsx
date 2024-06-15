@@ -1,5 +1,3 @@
-import { NextPage } from 'next';
-import Link from 'next/link';
 import {
   Container,
   Typography,
@@ -12,10 +10,13 @@ import {
   Select,
   MenuItem,
 } from '@mui/material';
-import useStyles from '../hooks/useStyles';
+import { NextPage } from 'next';
+import Link from 'next/link';
+
+import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
-import Footer from '@/components/Footer/Footer';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
+import ThemeSwitcher from '../components/ThemeSwitcher';
+import useStyles from '../hooks/useStyles';
 import { useTheme } from '../themes/ThemeContext';
 
 const HomePage: NextPage = () => {

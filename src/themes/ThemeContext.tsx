@@ -5,15 +5,17 @@ import React, {
   useContext,
   ReactNode,
 } from 'react';
+
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
   ThemeOptions,
   Theme,
 } from '@mui/material/styles';
+
+import customThemeJson from './custom-theme.json'; // เพิ่มธีมใหม่ตามต้องการ
 import darkThemeJson from './default-dark.json';
 import lightThemeJson from './default-light.json';
-import customThemeJson from './custom-theme.json'; // เพิ่มธีมใหม่ตามต้องการ
 
 type DesignThemeTypes = Partial<typeof lightThemeJson>;
 

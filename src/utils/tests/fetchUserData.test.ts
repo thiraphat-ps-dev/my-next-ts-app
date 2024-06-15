@@ -1,5 +1,5 @@
 // src/utils/fetchUserData.test.ts
-import { fetchUserData } from '../api/fetchUserData';
+import { fetchUserData } from '../fetchUserData';
 
 describe('fetchUserData', () => {
   beforeEach(() => {

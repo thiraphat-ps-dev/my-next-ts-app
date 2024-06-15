@@ -1,6 +1,8 @@
 import React from 'react';
+
+import { CircularProgress, Icon } from '@mui/material';
 import { StoryFn, Meta } from '@storybook/react';
-import { Box, CircularProgress, Icon } from '@mui/material';
+
 import Button from './Button';
 
 export default {

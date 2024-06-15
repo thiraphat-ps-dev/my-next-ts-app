@@ -1,5 +1,4 @@
 // src/pages/about.tsx
-import { useQuery } from '@tanstack/react-query';
 import {
   Container,
   Typography,
@@ -7,8 +6,10 @@ import {
   CircularProgress,
   Button,
 } from '@mui/material';
+import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
-import { fetchUserData } from '../utils/api/fetchUserData';
+
+import { fetchUserData } from '../utils/fetchUserData';
 
 const AboutPage = () => {
   const { data, error, isLoading } = useQuery({

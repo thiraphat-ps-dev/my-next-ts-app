@@ -1,5 +1,4 @@
 // src/pages/newpage.tsx
-import { useQuery } from '@tanstack/react-query';
 import {
   Container,
   Typography,
@@ -9,8 +8,10 @@ import {
   Paper,
 } from '@mui/material';
 import { DataGrid, GridColDef, GridRowsProp } from '@mui/x-data-grid';
+import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
-import { fetchPostsData } from '../utils/api/fetchPostsData';
+
+import { fetchPostsData } from '../utils/fetchPostsData';
 
 const NewPage = () => {
   const { data, error, isLoading } = useQuery({
@@ -50,11 +51,13 @@ const NewPage = () => {
     { field: 'body', headerName: 'Body', width: 600 },
   ];
 
-  const rows: GridRowsProp = data.map((post: any) => ({
-    id: post.id,
-    title: post.title,
-    body: post.body,
-  }));
+  const rows: GridRowsProp = data.map(
+    (post: { id: number; title: string; body: string }) => ({
+      id: post.id,
+      title: post.title,
+      body: post.body,
+    }),
+  );
 
   return (
     <Container maxWidth="lg">

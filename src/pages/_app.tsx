@@ -1,9 +1,11 @@
 // src/pages/_app.tsx
 import * as React from 'react';
-import { AppProps } from 'next/app';
+
 import { CssBaseline, Container, Box } from '@mui/material';
+import { AppProps } from 'next/app';
+
+import ReactQueryProvider from '../common/ReactQueryProvider';
 import ThemeProvider from '../themes/ThemeContext';
-import ReactQueryProvider from '@/components/common/ReactQueryProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
