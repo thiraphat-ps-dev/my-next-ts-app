@@ -14,7 +14,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "cypress:run": "cypress run",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
@@ -44,6 +45,7 @@
     "@storybook/react": "^8.1.9",
     "@storybook/react-webpack5": "^8.1.9",
     "@storybook/test": "^8.1.9",
+    "@storybook/test-runner": "^0.18.2",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@types/cypress": "^1.1.3",
