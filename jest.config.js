@@ -1,4 +1,3 @@
-// jest.config.js
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
@@ -14,4 +13,6 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
+  transformIgnorePatterns: ['/node_modules/'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };

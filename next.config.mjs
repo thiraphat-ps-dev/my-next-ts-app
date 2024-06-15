@@ -1,10 +1,11 @@
 import path from 'path';
 
 const nextConfig = {
-  // การตั้งค่าพื้นฐานต่างๆ ของ Next.js
   reactStrictMode: true,
   swcMinify: true,
-  // การปรับแต่ง Webpack
+  future: {
+    webpack5: true,
+  },
   webpack: (config, { isServer }) => {
     // เพิ่ม .mjs เป็นส่วนหนึ่งของการ resolve
     config.resolve.extensions.push('.mjs');
@@ -14,6 +15,7 @@ const nextConfig = {
       process.cwd(),
       'components',
     );
+    config.resolve.alias['@'] = path.join(process.cwd(), 'src');
 
     // ตั้งค่า loader สำหรับไฟล์ .mjs
     config.module.rules.push({
@@ -21,6 +23,15 @@ const nextConfig = {
       include: /node_modules/,
       type: 'javascript/auto',
     });
+
+    // ตัวอย่างการตั้งค่า resolve fallback
+    if (!isServer) {
+      config.resolve.fallback = {
+        fs: false,
+        path: false,
+        os: false,
+      };
+    }
 
     return config;
   },
