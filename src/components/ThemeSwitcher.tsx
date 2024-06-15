@@ -12,6 +12,10 @@ const ThemeSwitcher: React.FC = () => {
       sx={{
         background: theme.comp?.btn.color['background']['default-normal'],
         color: theme.comp?.btn.color['content']['default'],
+        ':hover': {
+          background: theme.comp?.btn.color['background']['default-hover'],
+          color: theme.comp?.btn.color['content']['default'],
+        },
       }}
       variant="contained"
     >

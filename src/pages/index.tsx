@@ -9,21 +9,18 @@ import {
   Card,
   CardContent,
   CardMedia,
-  IconButton,
+  Select,
+  MenuItem,
 } from '@mui/material';
 import useStyles from '../hooks/useStyles';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
-import { useState } from 'react';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
+import { useTheme } from '../themes/ThemeContext';
 
 const HomePage: NextPage = () => {
   const { buttonStyles } = useStyles();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
+  const { toggleTheme, setTheme, themeName } = useTheme();
 
   return (
     <Box
@@ -38,6 +35,31 @@ const HomePage: NextPage = () => {
     >
       <Navbar />
       <ThemeSwitcher />
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        marginTop={4}
+      >
+        <Typography variant="h4">Home Page</Typography>
+        <Button
+          variant="contained"
+          onClick={toggleTheme}
+          style={{ marginBottom: 16 }}
+        >
+          Toggle Theme
+        </Button>
+        <Select
+          value={themeName}
+          onChange={(event) =>
+            setTheme(event.target.value as 'light' | 'dark' | 'custom')
+          }
+        >
+          <MenuItem value="light">Light Theme</MenuItem>
+          <MenuItem value="dark">Dark Theme</MenuItem>
+          <MenuItem value="custom">Custom Theme</MenuItem>
+        </Select>
+      </Box>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', marginTop: 8 }}>
           <Typography
