@@ -14,10 +14,11 @@ import useStyles from './Navbar.style';
 
 const Navbar: React.FC = () => {
   const { navbarStyles } = useStyles();
+  const navStyle = navbarStyles({ padding: '44px' });
 
   return (
     <Box>
-      <AppBar position="static" sx={navbarStyles}>
+      <AppBar position="static" className="b" sx={navStyle}>
         <Toolbar>
           <IconButton
             size="large"
