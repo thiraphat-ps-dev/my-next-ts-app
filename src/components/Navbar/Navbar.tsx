@@ -14,7 +14,7 @@ import useStyles from './Navbar.style';
 
 const Navbar: React.FC = () => {
   const { navbarStyles } = useStyles();
-  const navStyle = navbarStyles({ padding: '44px' });
+  const navStyle = navbarStyles({ padding: '4px' });
 
   return (
     <Box>
@@ -32,6 +32,7 @@ const Navbar: React.FC = () => {
           <Typography variant="h6" noWrap component="div" flex={1}>
             My Next.js App
           </Typography>
+
           <IconButton
             size="large"
             edge="end"

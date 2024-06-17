@@ -95,6 +95,14 @@ const HomePage: NextPage = () => {
                   New Page
                 </Button>
               </Link>
+              <Link href="/product-list" passHref>
+                <Button
+                  variant="outlined"
+                  sx={{ margin: 1, color: '#ffffff', borderColor: '#ffffff' }}
+                >
+                  Product List
+                </Button>
+              </Link>
               <Link href="/about" passHref>
                 <Button
                   variant="outlined"

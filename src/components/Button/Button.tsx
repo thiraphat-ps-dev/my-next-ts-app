@@ -693,7 +693,16 @@ const Button: React.FC<ButtonCustomProps> = (props) => {
       ...stateStyle.normal,
       padding,
       '&:hover': {
-        ...stateStyle.danger?.normal,
+        ...stateStyle.hover,
+      },
+      '&:active': {
+        ...stateStyle.press,
+      },
+      '&:focus': {
+        ...stateStyle.focus,
+      },
+      '&:disabled': {
+        ...stateStyle.disable,
       },
     } as SxProps;
   };
