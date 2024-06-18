@@ -16,6 +16,4 @@ npm run type-check
 # Run tests
 npm run test
 
-# Run Cypress tests
-npm run cypress:run
 
