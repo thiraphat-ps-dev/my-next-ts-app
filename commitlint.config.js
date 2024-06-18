@@ -1,20 +1,24 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
+    'type-case': [2, 'always', 'pascal-case'], // บังคับให้ type เป็น PascalCase
     'type-enum': [
       2,
       'always',
       [
-        'feat', // ฟีเจอร์ใหม่
-        'fix', // แก้บัค
-        'docs', // ปรับปรุงเอกสาร
-        'style', // การเปลี่ยนแปลงที่ไม่ส่งผลต่อโค้ด เช่น ฟอร์แมต
-        'refactor', // การปรับปรุงโค้ดที่ไม่ส่งผลต่อฟีเจอร์หรือบัค
-        'perf', // การปรับปรุงประสิทธิภาพ
-        'test', // เพิ่มหรือปรับปรุงเทส
-        'chore', // งานที่ไม่เกี่ยวกับโค้ด เช่น การสร้างไฟล์ build
+        'Feat',
+        'Fix',
+        'Docs',
+        'Style',
+        'Refactor',
+        'Perf',
+        'Test',
+        'Chore',
+        'Build',
+        'Ci',
+        'Revert',
       ],
     ],
-    'subject-case': [2, 'always', 'sentence-case'], // บังคับให้หัวข้อเป็น Sentence Case
+    'subject-case': [0, 'always'], // ปิดการบังคับใช้ subject-case
   },
 };
