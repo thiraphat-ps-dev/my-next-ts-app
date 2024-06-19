@@ -2,7 +2,6 @@ import {
   Container,
   Typography,
   Box,
-  Button,
   Grid,
   Card,
   CardContent,
@@ -10,7 +9,7 @@ import {
   Select,
   MenuItem,
 } from '@mui/material';
-import { useKPTheme } from 'kp-components';
+import { useKPTheme, Button } from 'kp-components';
 import { NextPage } from 'next';
 import Link from 'next/link';
 
@@ -49,6 +48,35 @@ const HomePage: NextPage = () => {
           style={{ marginBottom: 16 }}
         >
           Toggle Theme
+        </Button>
+
+        <Button
+          variant="contained"
+          style={{ marginBottom: 16 }}
+          types="default"
+        >
+          Kp Button
+        </Button>
+        <Button
+          variant="contained"
+          style={{ marginBottom: 16 }}
+          types="primary"
+        >
+          Kp Button
+        </Button>
+        <Button
+          variant="contained"
+          style={{ marginBottom: 16 }}
+          types="secondary"
+        >
+          Kp Button
+        </Button>
+        <Button
+          variant="contained"
+          style={{ marginBottom: 16 }}
+          types="facebook"
+        >
+          Kp Button
         </Button>
         <Select
           value={themeName}
