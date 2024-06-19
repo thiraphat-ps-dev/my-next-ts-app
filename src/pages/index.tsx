@@ -10,6 +10,7 @@ import {
   Select,
   MenuItem,
 } from '@mui/material';
+import { useKPTheme } from 'kp-components';
 import { NextPage } from 'next';
 import Link from 'next/link';
 
@@ -17,11 +18,10 @@ import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import useStyles from '../hooks/useStyles';
-import { useTheme } from '../themes/ThemeContext';
 
 const HomePage: NextPage = () => {
   const { buttonStyles } = useStyles();
-  const { toggleTheme, setTheme, themeName } = useTheme();
+  const { toggleTheme, setTheme, themeName } = useKPTheme();
 
   return (
     <Box

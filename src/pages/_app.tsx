@@ -2,15 +2,16 @@
 import * as React from 'react';
 
 import { CssBaseline, Container, Box } from '@mui/material';
+import { KPThemeProvider } from 'kp-components';
 import { AppProps } from 'next/app';
 
 import ReactQueryProvider from '../common/ReactQueryProvider';
-import ThemeProvider from '../themes/ThemeContext';
+// import ThemeProvider from '../themes/ThemeContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ReactQueryProvider>
-      <ThemeProvider>
+      <KPThemeProvider>
         <CssBaseline />
         <Box
           sx={{
@@ -25,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </Container>
         </Box>
-      </ThemeProvider>
+      </KPThemeProvider>
     </ReactQueryProvider>
   );
 }

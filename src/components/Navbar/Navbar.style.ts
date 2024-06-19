@@ -1,8 +1,8 @@
-import { useTheme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
+import { useKPTheme } from 'kp-components';
 
 const useStyles = () => {
-  const theme = useTheme();
+  const { theme } = useKPTheme();
 
   const navbarStyles = ({ padding }: { padding: string }) => {
     return {
