@@ -62,12 +62,6 @@ interface ThemeContextType {
   themeName: string;
 }
 
-const themes = {
-  light: lightThemeJson,
-  dark: darkThemeJson,
-  custom: customThemeJson,
-};
-
 const ThemeContext = createContext<ThemeContextType>({
   toggleTheme: () => {},
   setTheme: () => {},
@@ -79,17 +73,18 @@ export const useTheme = () => useContext(ThemeContext);
 
 interface ThemeProviderProps {
   children: ReactNode;
+  themeJson: { [key: string]: DesignThemeTypes };
 }
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [themeName, setThemeName] = useState<string>('light');
+const ThemeProvider: React.FC<ThemeProviderProps> = ({
+  children,
+  themeJson,
+}) => {
+  const [themeName, setThemeName] = useState<string>(Object.keys(themeJson)[0]);
 
   const theme = useMemo(
-    () =>
-      createTheme(
-        themes[themeName as 'light' | 'dark' | 'custom'] as ThemeOptions,
-      ),
-    [themeName],
+    () => createTheme(themeJson[themeName] as ThemeOptions),
+    [themeJson, themeName],
   );
 
   const toggleTheme = () => {

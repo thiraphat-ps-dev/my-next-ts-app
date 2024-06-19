@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { Button } from '@mui/material';
-import { useKPTheme } from 'kp-components';
+
+import { useTheme } from '../themes/ThemeContext';
 
 const ThemeSwitcher: React.FC = () => {
-  const { toggleTheme, theme } = useKPTheme();
+  const { toggleTheme, theme } = useTheme();
 
   return (
     <Button
