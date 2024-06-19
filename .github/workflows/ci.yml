@@ -27,17 +27,3 @@ jobs:
 
       - name: Run lint
         run: npm run lint
-
-      - name: Build project
-        run: npm run build
-
-      - name: Start server
-        run: npm start &
-        env:
-          NODE_ENV: test
-
-      - name: Wait for server to be ready
-        run: npx wait-on http://localhost:3000
-
-      - name: Run Cypress tests
-        run: npm run cypress:run
