@@ -65,7 +65,7 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
 The project structure is organized as follows:
 
-\\\plaintext
+```plaintext
 my-next-ts-app/
 ├── public/           # Static files
 ├── src/              # Source files
@@ -78,7 +78,7 @@ my-next-ts-app/
 ├── README.md         # Project documentation
 ├── package.json      # NPM dependencies and scripts
 └── tsconfig.json     # TypeScript configuration
-\\\
+```
 
 ## Available Scripts
 
