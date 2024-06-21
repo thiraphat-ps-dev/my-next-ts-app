@@ -1,4 +1,3 @@
-
 # My Next.js TypeScript App
 
 This repository contains the source code for a Next.js application written in TypeScript. The project is designed to showcase best practices in modern web development, utilizing Next.js, TypeScript, and Material-UI (MUI).
@@ -31,21 +30,21 @@ Make sure you have the following software installed:
 ### Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/thiraphat-ps-dev/my-next-ts-app.git
-    ```
+   ```bash
+   git clone https://github.com/thiraphat-ps-dev/my-next-ts-app.git
+   ```
 2. Change into the project directory:
-    ```bash
-    cd my-next-ts-app
-    ```
+   ```bash
+   cd my-next-ts-app
+   ```
 3. Install the dependencies:
-    ```bash
-    npm install
-    ```
-    or
-    ```bash
-    yarn install
-    ```
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   yarn install
+   ```
 
 ### Running the Project
 
@@ -54,7 +53,9 @@ To start the development server, run:
 ```bash
 npm run dev
 ```
+
 or
+
 ```bash
 yarn dev
 ```
