@@ -1,11 +1,9 @@
 import path from 'path';
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  future: {
-    webpack5: true,
-  },
   webpack: (config, { isServer }) => {
     // เพิ่ม .mjs เป็นส่วนหนึ่งของการ resolve
     config.resolve.extensions.push('.mjs');
