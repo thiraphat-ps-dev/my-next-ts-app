@@ -1,316 +1,120 @@
+
 # My Next.js TypeScript App
 
-This is a Next.js project bootstrapped with TypeScript, Material-UI, React Query, and Storybook.
+This repository contains the source code for a Next.js application written in TypeScript. The project is designed to showcase best practices in modern web development, utilizing Next.js, TypeScript, and Material-UI (MUI).
 
 ## Table of Contents
 
-- [Features](#features)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Running the Development Server](#running-the-development-server)
-- [Building for Production](#building-for-production)
-- [Running Storybook](#running-storybook)
-- [Testing](#testing)
+- [Running the Project](#running-the-project)
 - [Folder Structure](#folder-structure)
+- [Available Scripts](#available-scripts)
+- [Configuration](#configuration)
+- [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Features
+## Getting Started
 
-- **Next.js**: The React framework for production
-- **TypeScript**: Strongly typed programming language that builds on JavaScript
-- **Material-UI**: React components for faster and easier web development
-- **React Query**: Hooks for fetching, caching, and updating asynchronous data
-- **Storybook**: UI component explorer for React
-- **Jest**: Delightful JavaScript testing framework with a focus on simplicity
+These instructions will help you set up and run the project on your local machine for development and testing purposes.
 
-## Installation
+### Prerequisites
 
-To get started with this project, clone the repository and install the dependencies:
+Make sure you have the following software installed:
 
-```bash
-git clone https://github.com/your-username/my-next-ts-app.git
-cd my-next-ts-app
-npm install
-# or
-yarn install
-```
+- Node.js (>=14.x.x)
+- npm or yarn
+- Git
 
-## Running the Development Server
+### Installation
 
-Run the development server:
+1. Clone the repository:
+    \`\`\`bash
+    git clone https://github.com/thiraphat-ps-dev/my-next-ts-app.git
+    \`\`\`
+2. Change into the project directory:
+    \`\`\`bash
+    cd my-next-ts-app
+    \`\`\`
+3. Install the dependencies:
+    \`\`\`bash
+    npm install
+    \`\`\`
+    or
+    \`\`\`bash
+    yarn install
+    \`\`\`
 
-```bash
+### Running the Project
+
+To start the development server, run:
+
+\`\`\`bash
 npm run dev
-# or
+\`\`\`
+or
+\`\`\`bash
 yarn dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Building for Production
-
-Build the application for production:
-
-```bash
-npm run build
-# or
-yarn build
-```
-
-The output will be in the `out/` directory.
-
-## Running Storybook
-
-To run Storybook and view your components in an isolated environment:
-
-```bash
-npm run storybook
-# or
-yarn storybook
-```
-
-Open [http://localhost:6006](http://localhost:6006) to view the Storybook UI.
-
-## Testing
-
-To run tests using Jest:
-
-```bash
-npm run test
-# or
-yarn test
-```
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the application in action.
 
 ## Folder Structure
 
-Here's an overview of the project's folder structure:
+The project structure is organized as follows:
 
-```plaintext
+\`\`\`plaintext
 my-next-ts-app/
-├── .husky/
-├── .next/
-├── node_modules/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── common/
-│   │   │   ├── ReactQueryProvider.tsx
-│   │   │   ├── ThemeProviderWrapper.tsx
-│   │   ├── specific/
-│   │       ├── SomeSpecificComponent.tsx
-│   ├── hooks/
-│   │   ├── useStyles.ts
-│   ├── pages/
-│   │   ├── about.tsx
-│   │   ├── contact.tsx
-│   │   ├── index.tsx
-│   │   ├── newpage.tsx
-│   │   ├── login.tsx
-│   ├── styles/
-│   │   ├── theme.ts
-│   │   ├── global.css
-│   ├── utils/
-│   │   ├── api/
-│   │   │   ├── fetchPostsData.ts
-│   │   │   ├── fetchUserData.ts
-│   │   ├── tests/
-│   │       ├── fetchPostsData.test.ts
-│   │       ├── fetchUserData.test.ts
-├── config/
-│   ├── jest.config.js
-│   ├── jest.setup.ts
-├── .eslintrc.json
-├── .gitignore
-├── next.config.mjs
-├── next-env.d.ts
-├── tsconfig.json
-├── package.json
-├── README.md
-└── ...
-```
+├── public/           # Static files
+├── src/              # Source files
+│   ├── components/   # React components
+│   ├── pages/        # Next.js pages
+│   ├── styles/       # CSS and styles
+│   ├── utils/        # Utility functions
+│   └── ...           # Other directories and files
+├── .gitignore        # Git ignore file
+├── README.md         # Project documentation
+├── package.json      # NPM dependencies and scripts
+└── tsconfig.json     # TypeScript configuration
+\`\`\`
 
-# Project Coding Conventions
+## Available Scripts
 
-## General Guidelines
+- \`dev\`: Start the development server.
+- \`build\`: Build the project for production.
+- \`start\`: Start the production server.
+- \`lint\`: Run ESLint to lint the code.
+- \`test\`: Run tests (if applicable).
 
-1. **Use TypeScript:** All files should use TypeScript (.tsx or .ts).
-2. **Consistent Formatting:** Use Prettier for consistent code formatting. Code should be formatted on save and all ESLint issues should be fixed.
-3. **Comments:** Use comments to explain complex logic and provide context where necessary. Avoid obvious comments.
+## Configuration
 
-## Folder Structure
+The project uses the following configuration files:
 
-- **/src**
-  - **/components**: Reusable components
-  - **/hooks**: Custom hooks
-  - **/pages**: Next.js pages
-  - **/utils**: Utility functions
-  - **/styles**: Global and component styles
+- \`next.config.js\`: Next.js configuration.
+- \`tsconfig.json\`: TypeScript configuration.
+- \`.eslintrc.js\`: ESLint configuration.
 
-## File Naming
+## Technologies Used
 
-- Use `camelCase` for file and folder names, except for React components which should use `PascalCase`.
-- Example:
-  - `src/hooks/useFetch.ts`
-  - `src/components/Navbar.tsx`
-
-## Components
-
-- **Functional Components:** Use functional components over class components.
-- **File Structure:** Each component should be in its own file.
-- **Styling:** Use Material-UI for styling. Custom styles should be defined in a `useStyles` hook.
-
-```tsx
-import React from 'react';
-import { Box } from '@mui/material';
-import useStyles from '../hooks/useStyles';
-
-const ExampleComponent: React.FC = () => {
-  const { exampleStyles } = useStyles();
-
-  return <Box sx={exampleStyles}>{/* Component content */}</Box>;
-};
-
-export default ExampleComponent;
-```
-
-## Hooks
-
-- **Naming:** Prefix custom hooks with `use`.
-- **Structure:** Custom hooks should be defined in the `/hooks` directory.
-
-```ts
-import { useState, useEffect } from 'react';
-
-const useFetchData = (url: string) => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, [url]);
-
-  return data;
-};
-
-export default useFetchData;
-```
-
-## Pages
-
-- **Naming:** Page files should be named according to the route they represent.
-- **Structure:** Define pages in the `/pages` directory. Each page should follow the structure:
-
-```tsx
-import { NextPage } from 'next';
-import { Container } from '@mui/material';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-
-const HomePage: NextPage = () => {
-  return (
-    <Container>
-      <Navbar />
-      {/* Page content */}
-      <Footer />
-    </Container>
-  );
-};
-
-export default HomePage;
-```
-
-## API Integration
-
-- **React Query:** Use React Query for data fetching.
-- **Structure:** API fetching logic should be placed in the `/utils` directory.
-
-```ts
-import axios from 'axios';
-
-export const fetchUserData = async () => {
-  const response = await axios.get('/api/user');
-  return response.data;
-};
-```
-
-## Styling
-
-- **Material-UI:** Use Material-UI components and theming.
-- **Custom Styles:** Define custom styles using the `useStyles` hook.
-
-```ts
-import { SxProps } from '@mui/system';
-import { useTheme } from '@mui/material/styles';
-
-const useStyles = () => {
-  const theme = useTheme();
-
-  const exampleStyles: SxProps = {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.common.white,
-  };
-
-  return { exampleStyles };
-};
-
-export default useStyles;
-```
-
-## Testing
-
-- **Framework:** Use Jest for unit testing.
-- **Structure:** Place tests in the `/tests` directory, mirroring the structure of `/src`.
-
-```ts
-import { render, screen } from '@testing-library/react';
-import ExampleComponent from '../src/components/ExampleComponent';
-
-test('renders example component', () => {
-  render(<ExampleComponent />);
-  const element = screen.getByText(/example component/i);
-  expect(element).toBeInTheDocument();
-});
-```
-
-## Storybook
-
-- **Setup:** Use Storybook for component documentation and testing.
-- **Structure:** Place stories in the `/stories` directory, mirroring the structure of `/src`.
-
-```tsx
-import React from 'react';
-import { StoryFn, Meta } from '@storybook/react';
-import Button from '../src/components/Button';
-
-export default {
-  title: 'Example/Button',
-  component: Button,
-} as Meta<typeof Button>;
-
-const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  variant: 'contained',
-  color: 'primary',
-  children: 'Primary Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  variant: 'contained',
-  color: 'secondary',
-  children: 'Secondary Button',
-};
-```
-
-By following these conventions, we can ensure our codebase remains clean, consistent, and maintainable.
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Material-UI (MUI)](https://mui.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Husky](https://github.com/typicode/husky)
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request if you have any changes or suggestions.
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (\`git checkout -b feature/your-feature-name\`).
+3. Make your changes.
+4. Commit your changes (\`git commit -m 'Add some feature'\`).
+5. Push to the branch (\`git push origin feature/your-feature-name\`).
+6. Open a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
