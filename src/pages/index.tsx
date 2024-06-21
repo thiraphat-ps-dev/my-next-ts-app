@@ -15,6 +15,7 @@ import Link from 'next/link';
 
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
+import Sidebar from '../components/Sidebar';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import useStyles from '../hooks/useStyles';
 
@@ -31,8 +32,10 @@ const HomePage: NextPage = () => {
         justifyContent: 'space-between',
         background: 'linear-gradient(135deg, #71b7e6, #9b59b6)',
         flex: 1,
+        marginLeft: '180px',
       }}
     >
+      <Sidebar />
       <Navbar />
       <ThemeSwitcher />
       <Box
@@ -121,6 +124,11 @@ const HomePage: NextPage = () => {
                   sx={{ margin: 1, color: '#ffffff', borderColor: '#ffffff' }}
                 >
                   New Page
+                </Button>
+              </Link>
+              <Link href="/profile" passHref>
+                <Button variant="contained" color="primary">
+                  Go to Profile Page
                 </Button>
               </Link>
               <Link href="/product-list" passHref>
