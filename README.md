@@ -31,33 +31,33 @@ Make sure you have the following software installed:
 ### Installation
 
 1. Clone the repository:
-    \`\`\`bash
+    ```bash
     git clone https://github.com/thiraphat-ps-dev/my-next-ts-app.git
-    \`\`\`
+    ```
 2. Change into the project directory:
-    \`\`\`bash
+    ```bash
     cd my-next-ts-app
-    \`\`\`
+    ```
 3. Install the dependencies:
-    \`\`\`bash
+    ```bash
     npm install
-    \`\`\`
+    ```
     or
-    \`\`\`bash
+    ```bash
     yarn install
-    \`\`\`
+    ```
 
 ### Running the Project
 
 To start the development server, run:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 or
-\`\`\`bash
+```bash
 yarn dev
-\`\`\`
+```
 
 Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the application in action.
 
@@ -82,19 +82,19 @@ my-next-ts-app/
 
 ## Available Scripts
 
-- \`dev\`: Start the development server.
-- \`build\`: Build the project for production.
-- \`start\`: Start the production server.
-- \`lint\`: Run ESLint to lint the code.
-- \`test\`: Run tests (if applicable).
+- `dev`: Start the development server.
+- `build`: Build the project for production.
+- `start`: Start the production server.
+- `lint`: Run ESLint to lint the code.
+- `test`: Run tests (if applicable).
 
 ## Configuration
 
 The project uses the following configuration files:
 
-- \`next.config.js\`: Next.js configuration.
-- \`tsconfig.json\`: TypeScript configuration.
-- \`.eslintrc.js\`: ESLint configuration.
+- `next.config.js`: Next.js configuration.
+- `tsconfig.json`: TypeScript configuration.
+- `.eslintrc.js`: ESLint configuration.
 
 ## Technologies Used
 
@@ -109,10 +109,10 @@ The project uses the following configuration files:
 Contributions are welcome! Please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch (\`git checkout -b feature/your-feature-name\`).
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
 3. Make your changes.
-4. Commit your changes (\`git commit -m 'Add some feature'\`).
-5. Push to the branch (\`git push origin feature/your-feature-name\`).
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/your-feature-name`).
 6. Open a pull request.
 
 ## License
