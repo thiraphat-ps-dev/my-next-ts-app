@@ -12,7 +12,7 @@ import {
   Toolbar,
 } from '@mui/material';
 
-const drawerWidth = 180;
+const drawerWidth = 150;
 
 const Sidebar = () => {
   const items = [
